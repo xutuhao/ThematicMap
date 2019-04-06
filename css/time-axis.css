@@ -1,0 +1,224 @@
+
+button {
+    outline: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, select {
+    text-transform: none;
+}
+button {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.fr {
+    float: right;
+}
+.fl {
+    float: left;
+}
+.time-axis {
+
+    z-index: 101;
+}
+.time-axis-padding * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;;
+}
+.common-display {
+    position: absolute;
+
+}
+/********* 鏃堕棿杞� *********/
+.time-axis {
+    position: absolute;
+    z-index: 101;
+    background: #fff;
+    /*border-radius: 3px;*/
+    opacity:0.9;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.time-axis .time-axis-padding {
+    padding: 0px 10px 0px 10px;
+    background: rgba(255, 255, 255, 0.9);
+}
+.time-drag {
+    cursor: move;
+    height: 15px;
+}
+.time-axis-inner {
+    cursor: default;
+    padding: 5px 0;
+}
+.time-axis .close {
+    position: absolute;
+    right: 6px;
+    top: 5px;
+}
+.time-axis button {
+    border: none;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.time-axis .play-box {
+    margin-top: 3px;
+    padding-top: 5px;
+    position: relative;
+}
+.time-axis .play-box:hover .play-option {
+    display: block;
+}
+.time-axis .play {
+    width: 16px;
+    height: 16px;
+    background:url(../images/icon_search.png) no-repeat -674px -1px;
+}
+.time-axis .pause {
+    width: 16px;
+    height: 16px;
+    background:url(../images/icon_search.png) no-repeat -658px 0px;
+}
+.time-axis .play-option {
+    position: absolute;
+    bottom: 20px;
+    left: -9px;
+    background: #fff;
+    display: none;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.time-axis .play-option .play-option-list {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    height: 28px;
+    width: 40px;
+    text-align: center;
+    line-height: 28px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+.time-axis .play-option .play-option-list:hover {
+    background: #4e97f6;
+    color: #fff;
+}
+.time-axis .play-option .active {
+    background: #3f88e7;
+    color: #fff;
+}
+.time-axis .play-option .play-option-list.active {
+    background: #3f88e7;
+}
+.time-axis .hover-active .play-option {
+    display: block;
+}
+.time-axis .pre-btn {
+    width: 10px;
+    height: 10px;
+    margin-top: 11px;
+    margin-left: 11px;
+    background:url(../images/icon_search.png) no-repeat -600px 0px;
+
+}
+.time-axis .next-btn {
+    width: 10px;
+    height: 10px;
+    margin-top: 11px;
+    background:url(../images/icon_search.png) no-repeat -626px 0px;
+}
+.time-axis .year-text {
+    padding: 0 5px;
+    line-height: 20px;
+}
+.time-axis .skate {
+    width: 320px;
+    height: 32px;
+    margin: 0 10px 0 10px;
+    position: relative;
+}
+.time-axis .skate .skate-wheel {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    margin-top: 4px;
+    top: 2px;
+    background: #3f88e7;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 3px solid #fff;
+    box-shadow: 0 0 1px #555;
+    z-index: 102;
+}
+
+.time-axis .skate .tick-box {
+    cursor: pointer;
+    /*padding: 0 7.5px;*/
+    height:24px;
+    border:1px solid #cccccc;
+    border-radius:12px;
+    margin-top:4px;
+}
+.time-axis .skate .tick {
+    width: 10%;
+    height: 5px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    position: relative;
+    display:none;
+}
+.time-axis .skate .tick:nth-last-child(2) {
+    border-right: 1px solid #ccc;
+}
+.time-axis .skate .tick-last {
+    float: left;
+    width: 0;
+    height: 5px;
+    position: relative;
+}
+.time-axis .skate .tick-text {
+    position: absolute;
+    left: -16px;
+    top: 14px;
+    color: #999;
+    font-size: 13px;
+    width: 32px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display:none;
+}
+.time-axis .active .tick-text {
+    color: #3f88e7;
+}
+
+.time-axis .progress{
+	background: #4c90e7;
+    height: 14px;
+    border-radius: 9px;
+    margin: 4px 10px;
+    width:0px;
+}
+
+.time-axis .current-tick{
+	float: left;
+    margin: 4px 20px;
+    display: inline-block;
+    text-align: center;
+}
